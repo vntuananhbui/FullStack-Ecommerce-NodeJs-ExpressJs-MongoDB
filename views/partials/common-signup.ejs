@@ -1,0 +1,38 @@
+<!-- // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs -->
+
+
+<div class="signup-error-message">
+    <%= typeof error != 'undefined' ? error: '' %>
+</div>
+<div class="form-control">
+    <label>Username</label> 
+    <input type="text" placeholder="Enter username" name="userName" id="userName" required>
+    <div class="error-message" id="userNameError" style="display: none;"></div>
+</div> 
+<div class="form-control"> 
+    <label>Password</label> 
+    <input type="password" id="password" placeholder="Enter password" name="password" onkeyup="checkPassword(this.value)" required>
+    <div class="error"></div>
+    <span id="toggleEye"></span>
+    <div class="validation">
+        <ul>
+            <li id="lower">At least one lowercase character</li>
+            <li id="upper">At least one uppercase character</li>
+            <li id="number">At least one number</li>
+            <li id="special">At least one special character</li>
+            <li id="length">At least 8 chracters</li>
+        </ul>
+    </div>
+</div>
+<div class="form-control">
+    <label>Profile picture</label> 
+    <input type="file" id="image_input" name="profilePicture" required>
+    <div id="display-img"></div>
+</div>
+<script src="/js/validate.js"></script>

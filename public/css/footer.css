@@ -1,0 +1,182 @@
+/* // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs */
+
+
+@keyframes wave {
+    from, to {
+        transform: translate(-50%, 0%);
+    }
+
+    50% {
+        transform: translate(-50%, -20%);
+    }
+}
+
+#bubble-wrapper {
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+    overflow-x: hidden;
+    left: 0;
+}
+
+.bubble {
+    height: max(300px, 30vw);
+    width: max(300px, 30vw);
+
+    background-color: white;  
+    border-radius: 100%;
+
+    position: absolute;
+    left: 50%;
+    top: 100%;
+
+    animation: wave 2s ease-in-out infinite;
+}
+
+@media(prefers-reduced-motion) {
+    .bubble {
+        animation: none;
+        display: none;
+    }
+}
+
+/* -- Footer styles -- */
+
+#footer {
+    background-color: var(--footer-background-color);
+    bottom: 0px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#footer-content {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#footer-content {
+    padding: 2rem 2rem 5rem 2rem;
+}
+
+.footer-section {  
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-about-us {
+    padding: 0 2rem 2rem 2rem;
+    background-color: var(--background-color);
+}
+
+.footer-about-us h6 {
+    color: #0203AC;
+}
+
+.footer-about-us img {
+   width: 30rem;
+   height: 20rem; 
+}
+
+.footer-section-title {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.footer-section-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 160px;
+}
+
+.footer-section-links > a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-section-links > a:hover {
+    text-decoration: underline;
+}
+
+#footer .footer-section .footer-copyright {
+    padding: 0 2rem 2rem;
+    position: relative;
+    z-index: 9999;
+    color: white;
+}
+
+@media(max-width: 1023px) {
+.about-us-content {
+    flex-flow: column wrap;
+}
+
+.footer-about-us img {
+    margin-left: 0;
+}
+#footer-content{
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-section-title {    
+    flex-shrink: 0;
+    width: 120px;
+}
+}
+
+@media(max-width: 767px) {
+    #footer {
+        position: relative;  
+        /* margin-top: 90vh; */
+    }
+
+    .footer-about-us img {
+        width: 20rem;
+        height: 10rem;
+    }
+
+    #footer-content {
+        padding: 2rem;
+    }
+
+    .footer-section-title {    
+        font-size: 18px;
+        width: 0;
+        
+    }
+
+    .footer-section-links > a {
+        font-size: 0.8rem;
+        margin-left: 50px;
+    }
+
+    .footer-section p {
+        font-size: 0.7rem;
+        margin-left: 30px;
+    }
+}

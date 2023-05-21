@@ -1,0 +1,44 @@
+<!-- // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs -->
+
+
+<p class="title">Sign Up as Shipper</p>
+
+<%- include ('../partials/signup-role-btn') %>
+
+<div class="seperator"></div>
+
+<form id="signupForm" class="login-form" action="/register-shipper" method="post" enctype="multipart/form-data">
+
+  <%- include ('../partials/common-signup') %>
+
+  <div class="form-control">
+    <label>Your name</label>
+    <input type="text" placeholder="Enter your name" name="name" required/>
+    <div class="error-message" id="nameErrorShipper" style="display: none;"></div>
+  </div>
+  <div class="form-control">
+    <label for="distribution-hub">Distribution Hub:</label>
+    <select name="hubName" id="hubName" required>
+      <option value="">--Select a distribution hub--</option>
+      <option value="GHTK">GHTK</option>
+      <option value="aha-move">Aha Move</option>
+      <option value="viettel">Viettel</option>
+      <option value="ghn">Giao Hàng Nhanh</option>
+    </select>
+    <input type="hidden" name="hubAddress" id="hubAddress" value="" required>
+  </div>
+  <button class="submit" type="submit">Register</button>
+</form>
+<script src="/js/shipper-create.js"></script>
+<script src="/js/validateShipper.js"></script>
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!-- // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs -->
+
+
+<p class="title">Sign Up as Customer</p>
+
+<%- include ('../partials/signup-role-btn') %>
+
+<div class="seperator"></div>
+
+<form id="signupForm" class="login-form" action="/register-customer" method="post" enctype="multipart/form-data">
+  
+  <%- include ('../partials/common-signup') %>
+  <div class="form-control"> 
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name" name="name" required>
+    <div class="error-message" id="nameErrorCustomer" style="display: none;"></div>
+  </div>
+  <div class="form-control"> 
+    <label>Address</label> 
+    <input type="text" placeholder="Enter address" name="address" required>
+    <div class="error-message" id="addressErrorCustomer" style="display: none;"></div>
+  </div>
+  <button class="submit" type="submit">Register</button>
+</form>
+
+<script src="/js/validateCustomer.js"></script>

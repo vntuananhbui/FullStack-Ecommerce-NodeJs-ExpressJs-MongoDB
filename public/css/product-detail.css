@@ -1,0 +1,160 @@
+/* // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs */
+
+
+.heading-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading-section h2 {
+  font-size: 32px;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.product-price {
+  clear: both;
+  color: var(--price-color);
+}
+
+.rate {
+  float: left;
+}
+
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked) > label {
+  float: right;
+  width: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 21px;
+  color: #ccc;
+  margin-bottom: 0;
+  line-height: 21px;
+}
+
+.rate:not(:checked) > label:before {
+  content: "\2605";
+}
+
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.form-control {
+  font-size: 15px;
+}
+
+.product-dtl label {
+  line-height: 16px;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.qtyminus,
+.qtyplus {
+  width: 40px;
+  height: 40px;
+}
+
+.qtyminus {
+  border-radius: 3px 0 0 3px;
+}
+
+.qtyplus {
+  border-radius: 0 3px 3px 0;
+}
+
+.black-btn {
+  border-radius: 4px;
+  background-color: #212529;
+  color: white;
+  border: solid 2px #212529;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.black-btn:hover {
+  background-color: white;
+  color: #212529;
+}
+
+.product-info-tabs .nav-tabs {
+  border-bottom: 2px solid #d8d8d8;
+}
+
+.product-info-tabs .nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+
+.product-info-tabs .nav-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #323232;
+}
+
+.product-info-tabs .nav-tabs .nav-item .nav-link:hover {
+  border: none;
+}
+
+.product-info-tabs .nav-tabs .nav-item.show .nav-link,
+.product-info-tabs .nav-tabs .nav-link.active,
+.product-info-tabs .nav-tabs .nav-link.active:hover {
+  border: none;
+  border-bottom: 2px solid #d8d8d8;
+  font-weight: bold;
+}
+
+.product-info-tabs .tab-content .tab-pane {
+  padding: 30px 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #7a7a7a;
+}
+
+.pd-description {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-weight: lighter;
+}
+
+.review-form .form-group {
+  clear: both;
+}
+
+.review-form .form-control {
+  font-size: 14px;
+}
+
+.review-form textarea.form-control {
+  resize: none;
+}

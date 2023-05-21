@@ -1,0 +1,30 @@
+<!-- // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs -->
+
+
+<nav class="sidebar bg-cover">
+    <h2 class="lh-base pb-5 ps-2 pt-2">Welcome <br><%= userName %>!</h2>
+    <ul class="sidebar-list ">
+        <li class="fw-bold fs-5">
+            <a href="<%= link %>" class="icon"><img src="/img/dashboard-icon.png" alt="Dashboard icon"
+                     class="pe-3"></a>
+            <a href="<%= link %>" class="title">Dashboard</a>
+        </li>
+        <li class="fw-bold fs-5">
+            <a href=""><img src="/img/user.png" alt="User icon"
+                class="icon pe-3"></a>
+            <a href="/myProfile" class="title">My Profile</a>
+        </li>
+        <li class="fs-5">
+            <form action="/logout" method="GET">
+                <a href="/logout" class="icon"><img src="/img/logout.png" alt="Log out button" class="pe-3"></a>
+                <a href="/logout" class="title">Log out</a>
+            </form>
+        </li>
+    </ul>
+</nav>

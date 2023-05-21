@@ -1,0 +1,48 @@
+/* // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs */
+
+
+.page {
+  background: #F6F7F9;
+}
+
+.image-container {
+  background-size: cover;
+  background-image: url('../img/placeholderAPI.jpg');
+  background-position: center;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1023px) {
+  .page {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .time {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 50px;
+  }
+  #days {
+    padding-left: 0.3rem;
+  }
+  #hours {
+    padding-left: 1.5rem;
+  }
+  #minutes,
+  #seconds {
+    padding-left: 2rem;
+  }
+}

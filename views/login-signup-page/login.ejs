@@ -1,0 +1,33 @@
+<!-- // RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Do Le Long An,Truong Hong Van,Bui Tuan Anh,Lao Vinh Khang,Pham Le Quynh Anh
+// ID: s3963207,s3957034,s3970375,s3891925,s3927427
+// Acknowledgement: MDN Web Docs, RMIT Canvas, ChatGPT, NPM Packages' Docs -->
+
+
+<p class="title">Nice to see you again!</p>
+<div class="seperator"></div>
+<div class="signup-error-message">
+  <%= typeof error != 'undefined' ? error: '' %>
+</div>
+<form id="loginForm" class="login-form" action="/login" method="post">
+  <div class="form-control">
+    <input type="text" placeholder="Email or phone number" name="userName" id="userName">
+  </div>
+  <div class="form-control">
+    <input type="password" id="password" placeholder="Password" name="password">
+    <span id="toggleEye"></span>
+  </div>
+  <button class="submit" type="submit">Sign in</button>
+</form>
+<div class="sub-login">
+  <input type="checkbox" id="remmeber_me" class="toggle">
+  <label for="remmeber_me" style="color: black;"> Remember Me</label>
+  <a href="#">Forgot password?</a>
+</div>
+<br>
+<p>
+  Don't have an account? <a href="/register-customer" style="color: #0203ac">Get Started</a>
+</p>
